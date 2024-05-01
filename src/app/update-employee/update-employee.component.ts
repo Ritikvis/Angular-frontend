@@ -12,8 +12,9 @@ export class UpdateEmployeeComponent {
   employee: Employee = new Employee(); // Define the 'employee' property here
 
   constructor(private route: ActivatedRoute, private router: Router, private employeeService: EmployeeService) {
-    this.employee.id = this.route.snapshot.params['id']; // Assuming you're using route parameters to get the employee ID
+    this.employee.id = this.route.snapshot.params['id']; 
   }
-
-  // Implement methods for updating the employee
+  onSubmit(): void {
+    // Implement form submission logic here
+  }
 }

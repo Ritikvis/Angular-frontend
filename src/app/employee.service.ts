@@ -20,4 +20,10 @@ export class EmployeeService {
     console.log("Making HTTP POST request to: ", this.baseURL);
     return this.httpClient.post<Employee>(this.baseURL, employee);
   }
+
+  updateEmployee(employee: Employee): Observable<Employee> {
+    const url = `${this.baseURL}/${employee.id}`;
+    console.log("Making HTTP PUT request to: ", url);
+    return this.httpClient.put<Employee>(url, employee);
+  }
 }

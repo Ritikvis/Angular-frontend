@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-frontend2'`, () => {
+  it(`should have as title 'Hello, angular-frontend2'`, () => { // Updated the title expectation
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-frontend2');
+    expect(app.title).toEqual('Hello, angular-frontend2'); // Updated the title expectation
   });
 
   it('should render title', () => {

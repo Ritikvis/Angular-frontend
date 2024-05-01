@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   employee: any = { emailId: '' }; // Define 'employee' property here
-  title = 'Full Stack Application';
+  title = 'Employee Management Application';
 }

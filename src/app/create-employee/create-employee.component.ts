@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../employee'; // Make sure to import your Employee model if you have one
+import { Employee } from '../employee'; // Import the Employee model if you have one
 import { EmployeeService } from '../employee.service';
 import { Router } from '@angular/router';
 
@@ -19,12 +19,12 @@ export class CreateEmployeeComponent implements OnInit {
 
   saveEmployee(): void {
     this.employeeService.createEmployee(this.employee).subscribe(
-      data => {
-        console.log(data);
+      (data: Employee) => {
+        console.log('Employee created:', data);
         this.goToEmployee();
       },
-      error => {
-        console.log(error);
+      (error: any) => {
+        console.error('Error creating employee:', error);
         // Handle error appropriately, e.g., display an error message
       }
     );
@@ -35,7 +35,7 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.employee);
+    console.log('Submitted employee:', this.employee);
     this.saveEmployee();
   }
 }
